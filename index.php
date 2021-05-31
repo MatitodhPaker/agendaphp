@@ -9,8 +9,12 @@
 
   </head>
   <body>
-      
-    
-    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+        <?php require_once "menu.php"?>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
