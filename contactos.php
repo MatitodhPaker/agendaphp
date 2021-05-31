@@ -15,6 +15,17 @@
         <?php require_once "menu.php"?>
         </div>
       </div>
+      <div class="row">
+        <div class="col">
+          <div class="jumbotron">
+            <h1 class="display-3">Contactos</h1>
+            <button class="btn btn-success"><i class="fas fa-user-plus"></i> Agregar contacto</button>
+            <hr class="my-2">
+            <div id="cargartablacontactos"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
+  <script src="public/js/contactos.js"></script>
 </html>

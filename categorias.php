@@ -15,6 +15,17 @@
         <?php require_once "menu.php"?>
         </div>
       </div>
+      <div class="row">
+        <div class="col">
+          <div class="jumbotron">
+            <h1 class="display-3">Categorias</h1>
+            <button class="btn btn-success"><i class="fas fa-folder-plus"></i> Agregar categoria</button>
+            <hr class="my-2">
+            <div id="cargartablacategorias"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
+  <script src="public/js/categorias.js"></script>
 </html>
