@@ -24,7 +24,7 @@
             <td><?php echo $mostrar['nombre'] ?></td>
             <td><?php echo $mostrar['descripcion'] ?></td>
             <td>
-              <span class="btn btn-warning btn-sm" data-toggle="modal" data-target="#actualizarCategoria">
+              <span class="btn btn-warning btn-sm" onclick="obtenerDatosCategorias('<?php echo $idcategoria?>')" data-toggle="modal" data-target="#actualizarCategoria">
                 <i class="fas fa-edit"></i>
               </span>
             </td>

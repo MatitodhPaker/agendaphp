@@ -8,7 +8,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form id="frmAgregarcategoria">
+        <form id="frmActualizarCategoria">
           <input type="text" name="idCategoria" id="idCategoria" hidden="">
           <label for="nombreCategoriaU">Nombre</label>
           <input type="text" name="nombreCategoriaU" id="nombreCategoriaU" class="form-control">
@@ -18,7 +18,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-warning">Actualizar</button>
+        <button type="button" class="btn btn-warning" id="btnActualizarCategoria">Actualizar</button>
       </div>
     </div>
   </div>
