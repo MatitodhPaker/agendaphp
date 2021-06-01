@@ -26,7 +26,7 @@
 		public function eliminarContacto($idContacto) {
 			$conexion = Conexion::conectar();
 
-			$sql = "DELETE FROM t_contactos WHERE id_contacto = ?";
+			$sql = "DELETE FROM t_contactos WHERE id_agenda = ?";
 			$query = $conexion->prepare($sql);
 			$query->bind_param('i', $idContacto);
 			$respuesta = $query->execute();
@@ -42,15 +42,15 @@
 							materno,
 							telefono,
 							email,
-							id_contacto  
+							id_agenda 
 					FROM t_contactos 
-					WHERE id_contacto = '$idContacto'";
+					WHERE id_agenda = '$idContacto'";
 			$result = mysqli_query($conexion, $sql);
 
 			$contacto = mysqli_fetch_array($result);
 
 			$datos = array(
-						"id_contacto" => $contacto['id_contacto'],
+						"id_contacto" => $contacto['id_agenda'],
 						"id_categoria" => $contacto['id_categoria'],
 						"nombre" => $contacto['nombre'],
 						"paterno" => $contacto['paterno'],
@@ -70,7 +70,7 @@
 										materno = ?,
 										telefono = ?,
 										email = ? 
-					WHERE id_contacto = ?";
+					WHERE id_agenda = ?";
 			$query = $conexion->prepare($sql);
 			$query->bind_param('isssssi', $datos['idCategoria'],
 										$datos['nombre'],

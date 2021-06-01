@@ -1,8 +1,7 @@
 <?php
   require_once "../../clases/conexion.php";
-  $objCon = new Conexion();
-  $conexion= $objCon->conectar();
-
+	$con = new Conexion();
+	$conexion = $con->conectar();
 	$sql = "SELECT 
 					    contactos.paterno AS paterno,
 					    contactos.materno AS materno,
@@ -10,7 +9,7 @@
 					    contactos.telefono AS telefono,
 					    contactos.email AS email,
 					    categorias.nombre AS categoria,
-					    contactos.id_contacto AS idContacto
+					    contactos.id_agenda AS idContacto
 					FROM
 					    t_contactos AS contactos
 					        INNER JOIN
@@ -45,7 +44,7 @@
 						<td><?php echo $mostrar['email'] ?></td>
 						<td><?php echo $mostrar['categoria'] ?></td>
 						<td>
-							<span class="btn btn-warning btn-sm" onclick="obtenerDatosContacto('<?php echo $idContacto ?>')" data-toggle="modal" data-target="#modalActualizarContacto">
+							<span class="btn btn-warning btn-sm" onclick="obtenerDatosContacto('<?php echo $idContacto ?>')" data-toggle="modal" data-target="#actualizarContacto">
 								<span class="fas fa-edit"></span>
 							</span>
 						</td>

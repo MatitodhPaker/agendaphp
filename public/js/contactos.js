@@ -25,7 +25,7 @@ function agregarContacto(){
 			respuesta = respuesta.trim();
 			if (respuesta == 1) {
 				$('#frmAgregarcontacto')[0].reset();
-				$('#cargaTablaContactos').load('vistas/contactos/tablacontactos.php');
+				$('#cargartablacontactos').load('vistas/contactos/tablacontactos.php');
 				swal(":D","Se agrego con exito!","success");
 			} else {
 				swal(":(","No se pudo agregar!","error");
