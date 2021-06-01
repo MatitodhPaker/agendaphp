@@ -9,6 +9,7 @@
       </div>
       <div class="modal-body">
         <form id="frmAgregarcategoria">
+          <input type="text" name="idCategoria" id="idCategoria" hidden="">
           <label for="nombreCategoriaU">Nombre</label>
           <input type="text" name="nombreCategoriaU" id="nombreCategoriaU" class="form-control">
           <label for="descripcionU">Descripcion</label>

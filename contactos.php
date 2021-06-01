@@ -19,10 +19,14 @@
         <div class="col">
           <div class="jumbotron">
             <h1 class="display-3">Contactos</h1>
-            <button class="btn btn-success"><i class="fas fa-user-plus"></i> Agregar contacto</button>
+            <button class="btn btn-success" data-toggle="modal" data-target="#agregarContacto"><i class="fas fa-user-plus"></i> Agregar contacto</button>
             <hr class="my-2">
             <div id="cargartablacontactos"></div>
           </div>
+          <?php 
+            require_once "vistas/contactos/modalagragar.php";
+            require_once "vistas/contactos/modalactualizar.php";
+          ?>
         </div>
       </div>
     </div>
