@@ -19,9 +19,13 @@
         <div class="col">
           <div class="jumbotron">
             <h1 class="display-3">Categorias</h1>
-            <button class="btn btn-success"><i class="fas fa-folder-plus"></i> Agregar categoria</button>
+            <button class="btn btn-success" data-toggle="modal" data-target="#agregarCategoria"><i class="fas fa-folder-plus"></i> Agregar categoria</button>
             <hr class="my-2">
             <div id="cargartablacategorias"></div>
+            <?php 
+            require_once "vistas/categorias/modalagregar.php";
+            require_once "vistas/categorias/modalactualizar.php";
+            ?>
           </div>
         </div>
       </div>
