@@ -13,22 +13,24 @@
           <th>Eliminar</th>
         </thead>
         <tbody>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>
-            <span class="btn btn-warning btn-sm" data-toggle="modal" data-target="#actualizarContacto">
-              <i class="fas fa-edit"></i>
-            </span>
-          </td>
-          <td>
-            <span class="btn btn-danger btn-sm" onclick="eliminarcontacto()">
-              <i class="far fa-trash-alt"></i>
-            </span>
-          </td>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <span class="btn btn-warning btn-sm" data-toggle="modal" data-target="#actualizarContacto">
+                <i class="fas fa-edit"></i>
+              </span>
+            </td>
+            <td>
+              <span class="btn btn-danger btn-sm" onclick="eliminarcontacto()">
+                <i class="far fa-trash-alt"></i>
+              </span>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>

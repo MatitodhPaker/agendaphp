@@ -1,3 +1,10 @@
+<?php
+  require_once "../../clases/conexion.php";
+  $objCon = new Conexion();
+  $conexion= $objCon->conectar();
+  $sql ="SELECT nombre, descripcion, id_categoria FROM t_categorias";
+  $result= mysqli_query($conexion, $sql);
+?>
 <div class="card">
   <div class="card-body">
     <div class="table-responsive">
@@ -9,18 +16,27 @@
           <th>Eliminar</th>
         </thead>
         <tbody>
-          <td></td>
-          <td></td>
-          <td>
-            <span class="btn btn-warning btn-sm" data-toggle="modal" data-target="#actualizarCategoria">
-              <i class="fas fa-edit"></i>
-            </span>
-          </td>
-          <td>
-            <span class="btn btn-danger btn-sm" onclick="eliminarcategoria()">
-              <i class="far fa-trash-alt"></i>
-            </span>
-          </td>
+        <?php
+          while ($mostrar=mysqli_fetch_array($result)) {
+            $idcategoria=$mostrar['id_categoria'];
+        ?>
+          <tr>
+            <td><?php echo $mostrar['nombre'] ?></td>
+            <td><?php echo $mostrar['descripcion'] ?></td>
+            <td>
+              <span class="btn btn-warning btn-sm" data-toggle="modal" data-target="#actualizarCategoria">
+                <i class="fas fa-edit"></i>
+              </span>
+            </td>
+            <td>
+              <span class="btn btn-danger btn-sm" onclick="eliminarcategoria('<?php echo $idcategoria?>')">
+                <i class="far fa-trash-alt"></i>
+              </span>
+            </td>
+          </tr>
+          <?php
+          }
+          ?>
         </tbody>
       </table>
     </div>
